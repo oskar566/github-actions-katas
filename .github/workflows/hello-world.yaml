@@ -1,5 +1,12 @@
 name: JAVA CI
-on: push
+on:
+  push:
+    branches:
+      - main
+      - "dev/**"
+  pull_request:
+    branches:
+      - main
 env:
       docker_username: oschr20
       docker_password: ${{ secrets.oschr20 }} 
