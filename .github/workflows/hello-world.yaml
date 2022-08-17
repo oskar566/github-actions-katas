@@ -40,8 +40,8 @@ jobs:
     needs: Build
     steps:
     - name: UploadCompiledCode
-       uses: actions/upload-artifact@v2
-       with:
+      uses: actions/upload-artifact@v2
+      with:
         name: compiledCode
         path: app/build/libs/app-0.1-all.jar
     - name:
