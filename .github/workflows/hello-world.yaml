@@ -10,11 +10,6 @@ jobs:
       - run: ci/build-app.sh
       - name: Test
         run: ci/unit-test-app.sh
-        - name: Download a single artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: my-artifact
-            path: path/to/download/artifact/
       - name: Upload Repo
         uses: actions/upload-artifact@v2
         with:
