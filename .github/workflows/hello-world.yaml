@@ -1,13 +1,16 @@
 name: hello-world
-on: push
+on: push¨
+name: JAVA CI
 jobs:
-  my-job:
-    runs-on: ubuntu-latest
-    container: gradle:6-jdk11
+runs-on: ubuntu-latest
+container: gradle:6-jdk11
+  Clone-down:
     steps:
       - name: Clone-down
         uses: actions/checkout@v2
       - run: ci/build-app.sh
+  Build:
+    steps:
       - name: Test
         run: ci/unit-test-app.sh
       - name: Upload Repo
